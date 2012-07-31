@@ -8,7 +8,7 @@
  * Modified: Tue Jun 19 16:00:00 2012 +0200
  */
 
-require(['libs/jquery', 'tools/core', 'tools/services'], function($, core, services) {
+require(['libs/jquery', 'libs/modernizr', 'tools/core', 'tools/services'], function($, Modernizr, core, services) {
 	// DOM ready
 	$(function() {
 		core.log.write('DOM is ready!');
