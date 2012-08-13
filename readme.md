@@ -17,4 +17,4 @@ This boilerplate is created to fit our needs - and therefore might require some 
 Get in touch
 ------------
 
-You can catch us [here via Github](https://github.com/verticlabs), or through our blog at [labs.vertic.com](http://labs.vertic.com].
+You can catch us [here via Github](https://github.com/verticlabs), or through our blog at [labs.vertic.com](http://labs.vertic.com).
