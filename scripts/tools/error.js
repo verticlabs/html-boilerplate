@@ -7,7 +7,7 @@
  *
  * Date: Tue Jan 31 12:00:00 2012 +0200
  */
-define(['libs/jquery', 'tools/log'], function($, _Log) {
+define(['jquery', 'tools/log'], function($, _Log) {
 	var _Error = function(){};
 	_Error.prototype = new _Log();
 	_Error.prototype.parent = _Log.prototype;

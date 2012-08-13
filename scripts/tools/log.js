@@ -7,7 +7,7 @@
  *
  * Date: Tue Jun 19, 2012 12:00:00 GMT +0200
  */
-define(['libs/jquery'], function($) {
+define(['jquery'], function($) {
 	var _Log = function(obj) {
 		// Set defaults
 		this.history = [];
@@ -49,7 +49,7 @@ define(['libs/jquery'], function($) {
 		
 		// Try native console, but fail silently
 		try {
-			console.log(orgArg, arg);
+			console.log(arg);
 		} catch(err) {}
 		
 		// Make loud debugging noises

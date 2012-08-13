@@ -10,20 +10,20 @@
 */
 /* Include framework and normalization */
 /**
- * Mixins for browser alignment
- * 
- * Vertic base
- *
- * @section		      Framework
- * @author          echristensen
-*/
-/**
  * Framework variables
  *
  * Framework vars
  *
  * @section		    Framework variables
  * @author        jjohansen
+*/
+/**
+ * Mixins for browser alignment
+ * 
+ * Vertic base
+ *
+ * @section		      Framework
+ * @author          echristensen
 */
 /**
  * Common baseline set after reset styles
@@ -498,7 +498,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: Arial, Helvetica, Verdana, sans-serif; }
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
 
 .group:after {
   content: ".";

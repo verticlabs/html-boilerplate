@@ -7,7 +7,7 @@
  *
  * Date: Tue Jan 31 12:00:00 2012 +0200
  */
-define(['libs/jquery', 'tools/log', 'tools/error', 'tools/JSON'], function($, _Log, _Error) {
+define(['jquery', 'tools/log', 'tools/error', 'tools/JSON'], function($, _Log, _Error) {
 	// Set up service utilities
 	var log = new _Log(),
 	error = new _Error(),
