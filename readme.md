@@ -11,7 +11,7 @@ A few notes on structure
 This boilerplate is created to fit our needs - and therefore might require some short notes:
 
 * We build our CSS with [SCSS](http://sass-lang.com/) using [Web Workbench](http://www.mindscapehq.com/products/web-workbench) for Visual Studio.
-* We're using [Respond.js](https://github.com/scottjehl/Respond/) to structure our JS , to keep it maintainable and logical.
+* We're using [Require.js](http://requirejs.org/) to structure our JS, to keep it maintainable and logical.
 * We try to build everything [modular](https://github.com/stubbornella/oocss/wiki). That means that everything is packed into it's own SCSS or Respond.js JavaScript file.
 
 Get in touch
