@@ -11,7 +11,7 @@
  */
 require.config({
 	paths: {
-		"jquery": "libs/jquery-1.7.2-min"
+		"jquery": "libs/jquery"
 	}
 });
 require(['jquery', 'libs/modernizr', 'tools/core', 'tools/services'], function($, Modernizr, core, services) {
@@ -21,6 +21,7 @@ require(['jquery', 'libs/modernizr', 'tools/core', 'tools/services'], function($
 		core.error.write(core,'Core dump','Reactor overheating',false);
 
 		// expose core to global scope as vertic
+		core.$ = $;
 		window.vertic = core;
 	});
 	

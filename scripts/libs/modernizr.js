@@ -24,7 +24,7 @@ define(function () {
 	*/
 
 	var Modernizr = (function (window, document, undefined) {
-		console.log(window, typeof window);
+		
 		var version = '2.6.2pre',
 
           Modernizr = {},
