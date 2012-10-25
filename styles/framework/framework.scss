@@ -56,7 +56,7 @@
 	text-indent:100%;
 	white-space:nowrap;
 }
-@mixin psuedo-block {
+@mixin pseudo-block {
 	@include hide-text;	
 	content:".";
 	display:block;
