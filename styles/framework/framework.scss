@@ -61,3 +61,21 @@
 	content:".";
 	display:block;
 }
+@mixin poly-before {
+	&:before {
+		content:"\2009";
+		@content;
+	}
+	&>.before {
+		@content;
+	}
+}
+@mixin poly-after {
+	&:after {
+		content:"\2009";
+		@content;
+	}
+	&>.after {
+		@content;
+	}
+}
