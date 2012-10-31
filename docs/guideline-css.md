@@ -14,7 +14,7 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 * All modifiers should be prefixed with is-/has-, not module name.
 * Use SASS, but only nest one level.
 * Order properties in every rule like this: BOX, POS, TYPO, BG, MISC, INC.
-* Use lowercase with dashes for naming. No camel casing or underscores.
+* Use lowercase with regular hyphens for naming. No camel casing or underscores.
 * Comment modules [like this](guideline-css-commentexample.css), and use double-dashes for inline/in-module comments.
 * Get familiar with the framework and build on it if you have a useful idea.
 * One module per file.
