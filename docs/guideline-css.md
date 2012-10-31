@@ -26,13 +26,15 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 
 ### Sections and modules
 
-All code is divided into one of three sections: __Base__, __Layout__ and __Module__, as inspired by SMACSS. 
+All code is divided into one of four sections: __Framework__, __Layout__, __Base__, and __Module__, as inspired by SMACSS. 
 
 All our CSS is written as modular CSS. The only exception from this rule is __Base__ styles, e.g. styles that control the base behaviour of the document, such as reset styles and base styling of common elements such as `html`, `body` and `a` tags. 
 
 __Layout__ holds very high-level modules with very limited styling, such as site-centering wrappers.
 
 __Module__ holds the rest of the site's styling, divided into portable modules.
+
+__Framework__ hold cross-project framework code. 
 
 All modules are stand-alone code blocks, that can and will work on their own and in conjunction with other modules. Modules can be nested inside each other, but shouldn't depend on it. 
 
@@ -138,17 +140,42 @@ Add blank line breaks to seperate code and use comments to explain your code - n
 
 ### Module commenting
 
+All modules should begin with a defining comment block, such as this:
+
+    /**
+    * Module name
+    * 
+    * Here is a longer description of the module that potentially
+    * can span over multiple lines.
+    *
+    * @section Framework/Base/Layout/Module
+    * @author ldeleuran
+    * @modifiedby echristensen (can have multiple of these)
+    */
+    
+Remember that comments is the best way to help your fellow developers.
+
 ### Code commenting
+
+If you need to put comments in-line or inside a module, use SASS double dashes (`// Inline code comment`) to define these comments. 
 
 ## File structure
 
 ### Framework
 
+All framework code should be kept in the __framework/framework.scss__ folder. If you need to add another framework file (which is unlikely), prefix the file with _framework-_.
+
 ### Variables
+
+Add all project level variables to __framework/vars.scss__. Only put variables in module files if you're ___absolutely sure that they will only be used in that module___.
 
 ### Modules
 
+Modules should live in they own designated file, named after the module (e.g. `.modulename` lives in __modules/modulename.scss__). One module per file.
+
 ## Third-party plugins
+
+Do not spend unecessary time rewriting modules to conform with these guidelines, but when including third party files, make sure that they don't mess with your project. If necessary, namespace them.
 
 ## Full module sample
 
@@ -158,7 +185,7 @@ Add blank line breaks to seperate code and use comments to explain your code - n
     * Here is a longer description of the module that potentially
     * can span over multiple lines.
     *
-    * @section Framework/Layout/Module
+    * @section Framework/Base/Layout/Module
     * @author ldeleuran
     * @modifiedby echristensen (can have multiple of these)
     */
@@ -204,53 +231,3 @@ Add blank line breaks to seperate code and use comments to explain your code - n
 			// Theme module element level properties
 		}
 	} 
-
-
-
----
-
-
-
-Modules
-Namespacing - even subelements
-Is/Has modifiers
-
-Coding guidelines
-CSS: “is-” or “has-” for all modifiers?
-JS: Quotation marks and other specifics
-JS: More strict guidelines?
-JSLint
-Update wiki
-https://github.com/madrobby/pragmatic.js
-
-
-CSS:
-* Modules
-* Namespace each module
-* Is/has state prefixes
-* Sub elements in modules prefixed with module name (explain why)
-* Module names based on function - readable module names
-* Take a look at Compass
-* Comments
-  - Section names based on SMACCS @section (Framework / Layout / Module)
-  - Module head comment format:
-    /**
-    * Module name
-    * 
-    * Here is a longer description of the module that potentially
-    * can span over multiple lines.
-    *
-    * @section Framework/Layout/Module
-    * @author ldeleuran
-    * @modifiedby echristensen (can have multiple of these)
-    */
-  - Do comments with // style
-* Single module files (with the odd exception (gridlist))
-* Code stubs for basic functionality
-* Extend the framework with a generated content polyfill mixin
-* Attribute order
-  BOX
-  POS
-  TYPO
-  BG
-  MISC
