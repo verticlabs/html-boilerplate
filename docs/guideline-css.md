@@ -6,14 +6,14 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 
 ## TL:DR;
 
-* Be familiar with OOCSS and SMACSS. 
-* Use SASS, but only nest one level.
+* Be familiar with [SMACSS](http://smacss.com/) and [OOCSS](https://github.com/stubbornella/oocss/wiki). 
+* Use [SASS](http://sass-lang.com/), but only nest one level.
 * Write OOCSS modules for everything.
-* Name modules according to functionality (not content), and use descriptive names.
+* Name modules according to functionality (not content), and use [sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/), descriptive names.
 * Namespace all sub-module elements by prefixing module name to selector (e.g. .modulename-subelement).
 * All modifiers should be prefixed with is-/has-, not module name.
 * Use SASS, but only nest one level.
-* Order properties in every rule like this: BOX, POS, TYPO, BG, MISC.
+* Order properties in every rule like this: BOX, POS, TYPO, BG, MISC, INC.
 * Use lowercase with dashes for naming. No camel casing or underscores.
 * Comment modules [like this](guideline-css-commentexample.css), and use double-dashes for inline/in-module comments.
 * Get familiar with the framework and build on it if you have a useful idea.
@@ -28,7 +28,7 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 
 All code is divided into one of three sections: __Base__, __Layout__ and __Module__, as inspired by SMACSS. 
 
-All our CSS is written as modular CSS. The only exception from this rule is __Base__ styles, e.g. styles that control the base behaviour of the document, such as reset styles and base styling of common elements such as HTML, BODY and A tags. 
+All our CSS is written as modular CSS. The only exception from this rule is __Base__ styles, e.g. styles that control the base behaviour of the document, such as reset styles and base styling of common elements such as `html`, `body` and `a` tags. 
 
 __Layout__ holds very high-level modules with very limited styling, such as site-centering wrappers.
 
@@ -38,39 +38,103 @@ All modules are stand-alone code blocks, that can and will work on their own and
 
 ### Naming and namespacing modules
 
-Modules should be named for functionality, not for what content they hold. This way, we keep or modules flexible and adaptable as content or module application change. 
+Modules should be [sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/), for functionality, not for what content they hold. This way, we keep or modules flexible and adaptable as content or module application change. 
 
 Module names should also be one-word (if possible) and lowercase with no hyphenation. Keep the module names as short as possible, without compromising readibility . Remember to think about your fellow coders - code should be readable. 
 
-All subelements in a given module should be prefixed with the module name. We do this to avoid specificity and inheritance errors when one module lives inside another module. For instance, two nested modules might both have headers (like a _.site_ module and a _.article_ module), so to avoid confusion, each module's header should be namespaced as such: _.site-header_, _.article-header_.
+All subelements in a given module should be prefixed with the module name. We do this to avoid specificity and inheritance errors when one module lives inside another module. For instance, two nested modules might both have headers (like a `.site` module and a `.article` module), so to avoid confusion, each module's header should be namespaced as such: `.site-header`, `.article-header`.
 
-Also, all submodule elements should be prefixed with the module class in the selector - e.g. _.site .site-header_ to ensure specificity and avoid inheritance issues. This is usually done through nesting in SASS (but more on that later). 
+Also, all submodule elements should be prefixed with the module class in the selector - e.g. `.site .site-header` to ensure specificity and avoid inheritance issues. This is usually done through nesting in SASS (but more on that later). 
 
 ### Module modifiers
 
-Most module will have modifiers (or states). Most common modifiers are _active_, _hover_ or _hidden_. Some modifiers will be classic CSS pseudo-classes such as _:hover_. 
+Most module will have modifiers (or states). Most common modifiers are _active_, _hover_ or _hidden_. Some modifiers will be classic CSS pseudo-classes such as `:hover`. 
 
-All modifiers that are not CSS pseudo-classes should be prefixed with _.is-_ or _.has-_. These classes do not need module name prefixing, as they are namespaced through the selector and always used in conjunction with an already namespaced class. 
+All modifiers that are not CSS pseudo-classes should be prefixed with `.is-` or `.has-`. These classes do not need module name prefixing, as they are namespaced through the selector and always used in conjunction with an already namespaced class. 
 
-### Theming modules
+Modifiers should be applied to the outermost element or containing module element if sensible (to allow changes across the entire module).
+
+#### Theming modules
+
+Themes, if they only apply to a single module, should be applied as a modifier and follow the rules given for that.
+
+Project-wide themes should be applied to absolute containing elements, such as a site-container, the `body` or the `html` element. Such themes should be prefixed with the worn __theme__, e.g. `.theme-admin`. Theme styles should then be put together with the modules they are affecting. In other words, we do not create a single file for the theme, but split theme rules out into the module files. This keeps module rules at the same place and makes it easier to understand inheritance and specificity. 
+
+#### Nesting modules
+
+If a module is nested inside another module, and it needs to behave a certain way, this should be done through applying a modifier to the nested module. If this is not possible, modifying rules should be kept inside the outer module. 
 
 ### Working with SASS
 
+[SASS](http://sass-lang.com/) is great and gives us a lot of freedom. But with [great powers, comes great responsibility](http://www.youtube.com/watch?v=IKmQW7JTb6s). So even though there's a lot of cool stuff in SASS, we need to keep our code clean and readable.
+
+* Use nesting only for namespacing modules and nest only one (1) level. 
+
+        .modulename {
+        	// Module level properties
+        	
+        	.modulename-elementname {
+        		// Module element level properties
+        		// No nesting beyond this level
+        	}
+        }
+
+* Use for loops only if it makes sense.
+* If you find yourself writing the same type of code over and over, create a mixin. If you find yourself creating the same mixin in two or more projects, think about adding it to the framework.
+* Use math to calculate percentage. It helps convey what you're actually doing to fellow developers.
+
+#### Variables
+
+Variables are very, very handy and one of the main upsides brought to light when talking about SASS. Varaibles, too, should be named using lowercase and normal hyphenation (see Naming conventions).
+
+However, the most common example for variables and SASS - _that color variables enable you to define a `$brandColor` variable and use it throughout a project_ - is fairy-tale land. Changes rarely only concern a single color change, and rarely are consistent cross-project. Therefore, name colors sensibly and with color, e.g. `$color-blue`, `$color-orange`, `$color-orange-dark` etc..
+
 ### Ordering properties
 
-  BOX
-  POS
-  TYPO
-  BG
-  MISC
+We order our properties in every rule in 6 different sections:
 
-## Naming conventions
+1. Box model - display mode, width, height, padding, margin etc.
+2. Position - Positioning and offsets
+3. Typography
+4. Background styles
+5. Miscellaneous
+6. Includes - mixins etc.
 
-### Functional naming
+Every section is seperated with a blank new line. Example:
 
-### Casing and hyphenation
+
+	.modulename {
+		display: block;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		width: auto;
+		height: auto;
+		min-width: 300px;
+		max-width: 800px;		
+		
+		position: relative;
+		
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 2em;
+		
+		background:#ccc url(../media/images/ui/back.gif) 0 0 repeat-x;
+		
+		border-radius: 5px;
+		
+		@include box-shadow(0 0 5px rgba(0,0,0,0.5));
+	}
+
+
+## Casing, hyphenation and tabs
+
+Follow [CSS semantics](http://csswizardry.com/2010/12/css-camel-case-seriously-sucks/) when you name stuff, be it class names or variables. CSS semantics means: all lowercase with no underscores. Use regular hyphens for hyphenation. 
+
+Use hard tabs (e.g. regular tabs, not spaces) for tabbing your code. This [allows your fellow coders to choose for themselves](http://lea.verou.me/2012/01/why-tabs-are-clearly-superior/) whether they want 2 or 4 spaces. Do, however, use spaces for vertical alignment. 
 
 ## Comments
+
+Add blank line breaks to seperate code and use comments to explain your code - not repeat it.
 
 ### Module commenting
 
@@ -86,6 +150,60 @@ All modifiers that are not CSS pseudo-classes should be prefixed with _.is-_ or 
 
 ## Third-party plugins
 
+## Full module sample
+
+    /**
+    * Module name
+    * 
+    * Here is a longer description of the module that potentially
+    * can span over multiple lines.
+    *
+    * @section Framework/Layout/Module
+    * @author ldeleuran
+    * @modifiedby echristensen (can have multiple of these)
+    */
+    $local-variable: 100px;
+    
+	.modulename {
+		// Module level properties
+		display: block;
+		padding: 0;
+		margin: 0;
+		overflow: hidden;
+		width: auto;
+		height: auto;
+		min-width: 300px;
+		max-width: 800px;		
+		
+		position: relative;
+		
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 2em;
+		
+		background:#ccc url(../media/images/ui/back.gif) 0 0 repeat-x;
+		
+		border-radius: 5px;
+		
+		@include box-shadow(0 0 5px rgba(0,0,0,0.5));
+		
+		.modulename-elementname {
+			// Module element level properties
+			// No nesting beyond this level
+		}
+		&.is-active {
+			// Active state
+		}
+		&.is-active .modulename-elementname {
+			// Active state
+		}
+	}
+	.theme-admin .modulename {
+		// Theme module level properties
+		
+		.modulename-elementname {
+			// Theme module element level properties
+		}
+	} 
 
 
 

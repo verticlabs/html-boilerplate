@@ -1,37 +1,35 @@
 /**
- * Main project stylesheet combiner
- * 
- * Project name
- *
- * @section		1.0			Baseline
- * @author						ldeleuran
- * @version						1.0
- * @since						1.0
+* Main project stylesheet combiner
+* 
+* Project name
+*
+* @section      Layout
+* @author       ldeleuran
 */
 /* Include framework and normalization */
 /**
- * Framework variables
- *
- * Framework vars
- *
- * @section		    Framework variables
- * @author        jjohansen
+* Framework variables
+*
+* Framework vars
+*
+* @section      Framework
+* @author       jjohansen
 */
 /**
- * Mixins for browser alignment
- * 
- * Vertic base
- *
- * @section		      Framework
- * @author          echristensen
+* Mixins for browser alignment
+* 
+* Vertic base
+*
+* @section      Framework
+* @author       echristensen, ldeleuran
 */
 /**
- * Common baseline set after reset styles
- * 
- * Baseline
- *
- * @section		   			Baseline
- * @author						echristensen
+* Common baseline set after reset styles
+* 
+* Baseline
+*
+* @section      Framework
+* @author       echristensen
 */
 /* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
 /* =============================================================================
@@ -484,14 +482,12 @@ table {
 
 /* Include modules */
 /**
- * Common baseline set after normalize styles
- * 
- * Baseline
- *
- * @section		1.2			Baseline
- * @author					ldeleuran
-* @version					1.0
- * @since					1.0
+* Common baseline set after normalize styles
+* 
+* Baseline
+*
+* @section      Layout
+* @author       ldeleuran
 */
 html {
   overflow-y: scroll;
@@ -546,4 +542,3 @@ img, embed, object, video {
   background: blue;
   color: #fff;
   text-shadow: none; }
-
