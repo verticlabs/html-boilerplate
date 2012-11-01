@@ -2,9 +2,9 @@
 
 This document contains the guidelines for front-end development with JavaScript at Vertic. The guidelines should be followed at any time, for any given project. A lot of our work is based on [jQuery](http://jquery.com/) and [AMD Modules](https://github.com/amdjs/amdjs-api/wiki) with [Require.js](http://requirejs.org/), so make sure to know your way around those frameworks. 
 
-[JSLint](https://github.com/douglascrockford/JSLint) and our flavour of it.
+TODO: [JSLint](https://github.com/douglascrockford/JSLint) and our flavour of it.
 
-[Pragmatic JS](https://github.com/madrobby/pragmatic.js)
+TODO: [Pragmatic JS](https://github.com/madrobby/pragmatic.js)
 
 Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v=b6kgS_AwuH0). So follow them closely at all times, but deviate if deemed necessary and/or prudent - not because you're lazy. AND, if and when you decide to deviate from them, make sure to comment it thoroughly, documenting _why_ and _how_. 
 
