@@ -38,13 +38,15 @@ __Framework__ hold cross-project framework code.
 
 All modules are stand-alone code blocks, that can and will work on their own and in conjunction with other modules. Modules can be nested inside each other, but shouldn't depend on it. 
 
-### Naming and namespacing modules
+### Naming, namespacing modules and inheritance
 
 Modules should be [sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/), for functionality, not for what content they hold. This way, we keep or modules flexible and adaptable as content or module application change. 
 
 Module names should also be one-word (if possible) and lowercase with no hyphenation. Keep the module names as short as possible, without compromising readibility . Remember to think about your fellow coders - code should be readable. 
 
 All subelements in a given module should be prefixed with the module name. We do this to avoid specificity and inheritance errors when one module lives inside another module. For instance, two nested modules might both have headers (like a `.site` module and a `.article` module), so to avoid confusion, each module's header should be namespaced as such: `.site-header`, `.article-header`.
+
+Avoid styling on core-elements, like `.site-header h1`, as this will very likely mess with the inheritance, if a module within the `.site-header` also uses the `h1` tag. This is known as either [selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/) or [depth of applicability](http://smacss.com/book/applicability). Adhering to this makes your code more flexible and portable.
 
 Also, all submodule elements should be prefixed with the module class in the selector - e.g. `.site .site-header` to ensure specificity and avoid inheritance issues. This is usually done through nesting in SASS (but more on that later). 
 
@@ -179,7 +181,7 @@ Do not spend unecessary time rewriting modules to conform with these guidelines,
 
 ## Deployment and tools
 
-Minification and VS Studio, WebWorkbench, Codekit
+TODO: Minification and VS Studio, WebWorkbench, Codekit
 
 ## Full module sample
 
