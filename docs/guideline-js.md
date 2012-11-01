@@ -4,7 +4,7 @@ This document contains the guidelines for front-end development with JavaScript 
 
 TODO: [JSLint](https://github.com/douglascrockford/JSLint) and our flavour of it.
 
-TODO: [Pragmatic JS](https://github.com/madrobby/pragmatic.js)
+A large extent of our guidelines adhere to the [Pragmatic JS guidelines](https://github.com/madrobby/pragmatic.js). Please read those brief guidelines, as they are both sensible and easy to follow and so that you know ehere these guidelines are in line with Pragmatic JS, and where they deviate. 
 
 Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v=b6kgS_AwuH0). So follow them closely at all times, but deviate if deemed necessary and/or prudent - not because you're lazy. AND, if and when you decide to deviate from them, make sure to comment it thoroughly, documenting _why_ and _how_. 
 
