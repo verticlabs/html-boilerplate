@@ -20,6 +20,7 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 * One module per file.
 * Put variables in the vars.scss file.
 * If possible, use third-party stuff as-is, but make sure it doesn't mess up your modules or base styles.
+* Concatenate and minify before deploying to live environments.
 * Be sensible.
 
 ## Code structure
