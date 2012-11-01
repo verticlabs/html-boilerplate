@@ -7,12 +7,12 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 ## TL:DR;
 
 * Be familiar with [SMACSS](http://smacss.com/) and [OOCSS](https://github.com/stubbornella/oocss/wiki). 
-* Use [SASS](http://sass-lang.com/), but only nest one level.
+* Use [SCSS](http://sass-lang.com/), but only nest one level.
 * Write OOCSS modules for everything.
 * Name modules according to functionality (not content), and use [sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/), descriptive names.
 * Namespace all sub-module elements by prefixing module name to selector (e.g. .modulename-subelement).
 * All modifiers should be prefixed with is-/has-, not module name.
-* Use SASS, but only nest one level.
+* Use SCSS, but only nest one level.
 * Order properties in every rule like this: BOX, POS, TYPO, BG, MISC, INC.
 * Use lowercase with regular hyphens for naming. No camel casing or underscores.
 * Comment modules [like this](guideline-css-commentexample.css), and use double-dashes for inline/in-module comments.
@@ -48,7 +48,7 @@ All subelements in a given module should be prefixed with the module name. We do
 
 Avoid styling on core-elements, like `.site-header h1`, as this will very likely mess with the inheritance, if a module within the `.site-header` also uses the `h1` tag. This is known as either [selector intent](http://csswizardry.com/2012/07/shoot-to-kill-css-selector-intent/) or [depth of applicability](http://smacss.com/book/applicability). Adhering to this makes your code more flexible and portable.
 
-Also, all submodule elements should be prefixed with the module class in the selector - e.g. `.site .site-header` to ensure specificity and avoid inheritance issues. This is usually done through nesting in SASS (but more on that later). 
+Also, all submodule elements should be prefixed with the module class in the selector - e.g. `.site .site-header` to ensure specificity and avoid inheritance issues. This is usually done through nesting in SCSS (but more on that later). 
 
 ### Module modifiers
 
@@ -68,9 +68,9 @@ Project-wide themes should be applied to absolute containing elements, such as a
 
 If a module is nested inside another module, and it needs to behave a certain way, this should be done through applying a modifier to the nested module. If this is not possible, modifying rules should be kept inside the outer module. 
 
-### Working with SASS
+### Working with SCSS
 
-[SASS](http://sass-lang.com/) is great and gives us a lot of freedom. But with [great powers, comes great responsibility](http://www.youtube.com/watch?v=IKmQW7JTb6s). So even though there's a lot of cool stuff in SASS, we need to keep our code clean and readable.
+[SCSS](http://sass-lang.com/) is great and gives us a lot of freedom. But with [great powers, comes great responsibility](http://www.youtube.com/watch?v=IKmQW7JTb6s). So even though there's a lot of cool stuff in SCSS, we need to keep our code clean and readable.
 
 * Use nesting only for namespacing modules and nest only one (1) level. 
 
@@ -89,9 +89,9 @@ If a module is nested inside another module, and it needs to behave a certain wa
 
 #### Variables
 
-Variables are very, very handy and one of the main upsides brought to light when talking about SASS. Varaibles, too, should be named using lowercase and normal hyphenation (see Naming conventions).
+Variables are very, very handy and one of the main upsides brought to light when talking about SCSS. Varaibles, too, should be named using lowercase and normal hyphenation (see Naming conventions).
 
-However, the most common example for variables and SASS - _that color variables enable you to define a `$brandColor` variable and use it throughout a project_ - is fairy-tale land. Changes rarely only concern a single color change, and rarely are consistent cross-project. Therefore, name colors sensibly and with color, e.g. `$color-blue`, `$color-orange`, `$color-orange-dark` etc..
+However, the most common example for variables and SCSS - _that color variables enable you to define a `$brandColor` variable and use it throughout a project_ - is fairy-tale land. Changes rarely only concern a single color change, and rarely are consistent cross-project. Therefore, name colors sensibly and with color, e.g. `$color-blue`, `$color-orange`, `$color-orange-dark` etc..
 
 ### Ordering properties
 
@@ -159,7 +159,7 @@ Remember that comments is the best way to help your fellow developers.
 
 ### Code commenting
 
-If you need to put comments in-line or inside a module, use SASS double dashes (`// Inline code comment`) to define these comments. 
+If you need to put comments in-line or inside a module, use SCSS double dashes (`// Inline code comment`) to define these comments. 
 
 ## File structure
 
@@ -181,7 +181,9 @@ Do not spend unecessary time rewriting modules to conform with these guidelines,
 
 ## Deployment and tools
 
-TODO: Minification and VS Studio, WebWorkbench, Codekit
+When deploying your CSS, make sure that your SCSS is compiled into a single file, and that you create a minified version of that file. Minified files should be named the same as their full-size counterparts, with an added .min just before the extension.
+
+A lot of our developers are running Microsoft Visual Studio, and [Mindscape's Web Workbench](http://www.mindscapehq.com/products/web-workbench) are a great tool for working with SCSS in that environment. For Mac developers, [CodeKit](http://incident57.com/codekit/) provideds a great way to work with SCSS (as well as a lot of other great stuff).
 
 ## Full module sample
 
