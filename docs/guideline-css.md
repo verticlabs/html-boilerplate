@@ -181,7 +181,7 @@ Do not spend unecessary time rewriting modules to conform with these guidelines,
 
 ## Deployment and tools
 
-When deploying your CSS, make sure that your SCSS is compiled into a single file, and that you create a minified version of that file. Minified files should be named the same as their full-size counterparts, with an added .min just before the extension.
+When deploying your CSS, make sure that your SCSS is compiled into a single file, and that you create a minified version of that file. Minified files should be named the same as their full-size counterparts, with an added .min just before the extension. Also, upload the unminified files to the deployment server. This way, you make them avaiable to any [curious learners out there](https://speakerdeck.com/rachelandrew/pushing-the-boundaries-without-breaking-the-web?slide=32).
 
 A lot of our developers are running Microsoft Visual Studio, and [Mindscape's Web Workbench](http://www.mindscapehq.com/products/web-workbench) are a great tool for working with SCSS in that environment. For Mac developers, [CodeKit](http://incident57.com/codekit/) provideds a great way to work with SCSS (as well as a lot of other great stuff).
 
