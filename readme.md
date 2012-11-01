@@ -14,7 +14,7 @@ This boilerplate is created to fit our needs - and therefore might require some 
 
 ## Guidelines
 
-We've written a bunch of guidelines for developing front-end code at Vertic. It's mostly common sense (or, at least we think so), but you can [check out the guidelines here](docs/guideline.md).
+We've written a bunch of guidelines for developing front-end code at Vertic. It's mostly common sense (or, at least we think so), but you can [check out the guidelines here](https://github.com/verticlabs/html-boilerplate/blob/master/docs/guideline.md).
 
 ## Get in touch
 
