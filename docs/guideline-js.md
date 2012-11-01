@@ -18,21 +18,35 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 
 ## Code structure
 
+### Namespacing and functional programming
+
+TODO: Don't spaghetti - pragmatic js.
+
 ### Working with AMD
+
+TODO: Introduce AMD
 
 #### Main.js and modules
 
+TODO: Create funcitonality in modules, do stuff in main.js.
+
 #### Structuring modules and dependencies
+
+TODO: Only reference modules you're using. Remember to clean up.
 
 ### The global namespace and exposing stuff
 
+TODO: Do not pollute, use vertic object.
+
 ## Coding style 
 
-camelCasing. Hard tabs. JSLint. Semi-colons
+TODO: camelCasing. Hard tabs. JSLint. Semi-colons
 
 Use hard tabs (e.g. regular tabs, not spaces) for tabbing your code. This [allows your fellow coders to choose for themselves](http://lea.verou.me/2012/01/why-tabs-are-clearly-superior/) whether they want 2 or 4 spaces. Do, however, use spaces for vertical alignment. 
 
 ## OO patterns and the prototype
+
+TODO: Talk about that we do not require OO patterns, but if ppl use them, ok. Maybe broad guidelines if people use them, like better documentation, etc.?
 
 ## Comments
 
@@ -53,13 +67,15 @@ Remember that comments is the best way to help your fellow developers.
 
 ## File structure
 
-libs, modules, tools - what goes where?
+TODO: libs, modules, tools - what goes where?
 
 ## Third-party plugins
 
+TODO: Encapsulating third-party modules in AMD, especially jquery plugins.
+
 ## Deployment and tools
 
-Require JS build and config. nodeJS. JSLint.
+TODO: Require JS build and config. nodeJS. JSLint.
 
 ## Full module sample
 
