@@ -1,6 +1,6 @@
 # Vertic - CSS Guidelines
 
-This document holds the guidelines for front-end development with CSS at Vertic. The guidelines should be followed at any time, for any given project. A lot of the guidelines is based on [SMACSS](http://smacss.com/) and [OOCSS](https://github.com/stubbornella/oocss/wiki), so make sure to know your way around those guidelines to understand where these guidelines deviate and align with SMACSS and OOCSS. 
+This document contains the guidelines for front-end development with CSS at Vertic. The guidelines should be followed at any time, for any given project. A lot of the guidelines is based on [SMACSS](http://smacss.com/) and [OOCSS](https://github.com/stubbornella/oocss/wiki), so make sure to know your way around those guidelines to understand where these guidelines deviate and align with SMACSS and OOCSS. 
 
 Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v=b6kgS_AwuH0). So follow them closely at all times, but deviate if deemed necessary and/or prudent - not because you're lazy. AND, if and when you decide to deviate from them, make sure to comment it thoroughly, documenting _why_ and _how_. 
 
@@ -176,6 +176,10 @@ Modules should live in they own designated file, named after the module (e.g. `.
 ## Third-party plugins
 
 Do not spend unecessary time rewriting modules to conform with these guidelines, but when including third party files, make sure that they don't mess with your project. If necessary, namespace them.
+
+## Deployment and tools
+
+Minification and VS Studio, WebWorkbench, Codekit
 
 ## Full module sample
 
