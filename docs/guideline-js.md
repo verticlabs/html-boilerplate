@@ -71,7 +71,7 @@ TODO: framework, libraries, plugins, project - what goes where?
 
 * Framework: Vertic framework
 * Libraries: Third party libraries
-* Plugin: AMD modules generic enough to be used cross project
+* Plugin: AMD modules generic enough to be used cross projects
 * Project: AMD modules specific to this project
 
 ## Third-party plugins
