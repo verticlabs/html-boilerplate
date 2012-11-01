@@ -1,15 +1,15 @@
 ﻿/**
-* Main project stylesheet combiner
-* 
 * Project name
 *
-* @section      Layout
+* Main project stylesheet combiner
+*
+* @section      Base
 * @author       ldeleuran
 */
-/* Include framework and normalization */
+// Include framework and normalization 
 @import "framework/vars.scss";
 @import "framework/framework.scss";
 @import "framework/normalize.scss";
 
-/* Include modules */
+// Include modules 
 @import "modules/baseline.scss";

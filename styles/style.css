@@ -1,16 +1,15 @@
 /**
-* Main project stylesheet combiner
-* 
 * Project name
 *
-* @section      Layout
+* Main project stylesheet combiner
+*
+* @section      Base
 * @author       ldeleuran
 */
-/* Include framework and normalization */
 /**
-* Framework variables
+* Vars
 *
-* Framework vars
+* Project (and framework) variables
 *
 * @section      Framework
 * @author       jjohansen
@@ -24,11 +23,11 @@
 * @author       echristensen, ldeleuran
 */
 /**
-* Common baseline set after reset styles
-* 
 * Baseline
 *
-* @section      Framework
+* Common baseline set after reset styles
+*
+* @section      Base
 * @author       echristensen
 */
 /* normalize.css 2012-03-11T12:53 UTC - http://github.com/necolas/normalize.css */
@@ -480,13 +479,12 @@ table {
   clear: both;
   visibility: hidden; }
 
-/* Include modules */
 /**
-* Common baseline set after normalize styles
-* 
 * Baseline
 *
-* @section      Layout
+* Common baseline set after normalize styles
+*
+* @section      Base
 * @author       ldeleuran
 */
 html {
@@ -503,10 +501,12 @@ body {
   clear: both;
   visibility: hidden; }
 
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
-i, em {
+i,
+em {
   font-style: italic; }
 
 a {
@@ -523,14 +523,22 @@ a:hover {
 a:active {
   color: #000; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: bold; }
 
 abbr {
   border-bottom: 1px dotted #333;
   cursor: help; }
 
-img, embed, object, video {
+img,
+embed,
+object,
+video {
   max-width: 100%; }
 
 ::-moz-selection {

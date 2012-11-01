@@ -94,6 +94,10 @@ Variables are very, very handy and one of the main upsides brought to light when
 
 However, the most common example for variables and SCSS - _that color variables enable you to define a `$brandColor` variable and use it throughout a project_ - is fairy-tale land. Changes rarely only concern a single color change, and rarely are consistent cross-project. Therefore, name colors sensibly and with color, e.g. `$color-blue`, `$color-orange`, `$color-orange-dark` etc..
 
+### Ordering rules and selectors
+
+Try to keep rules that are related together in the same place in a single document, such as modifiers. Only have one selector per line too maximize readability.
+
 ### Ordering properties
 
 We order our properties in every rule in 6 different sections:
