@@ -3,7 +3,7 @@
 *
 * Error log - dependant on normal log module
 *
-* @section Module
+* @section Framework
 * @author ldeleuran
 * @modifiedby echristensen
 */

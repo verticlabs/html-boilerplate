@@ -3,7 +3,7 @@
 *
 * https://github.com/douglascrockford/JSON-js
 *
-* @section Tool
+* @section Library
 * @author ldeleuran
 */
 define(function() {

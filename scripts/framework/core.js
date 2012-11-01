@@ -3,7 +3,7 @@
 *
 * Core container
 *
-* @section Module
+* @section Framework
 * @author ldeleuran
 * @modifiedby echristensen
 */

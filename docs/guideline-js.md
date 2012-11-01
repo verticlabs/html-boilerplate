@@ -32,7 +32,7 @@ TODO: Create funcitonality in modules, do stuff in main.js.
 
 #### Structuring modules and dependencies
 
-TODO: Only reference modules you're using. Remember to clean up.
+TODO: Only reference modules you're using. Remember to clean up. Briefly on sectioning: Framework/Library/Plugin/Project.
 
 ### The global namespace and exposing stuff
 
@@ -58,7 +58,7 @@ All modules should begin with a defining comment block, such as this:
     * Here is a longer description of the module that potentially
     * can span over multiple lines.
     *
-    * @section Library/Module/Tool
+    * @section Framework/Library/Plugin/Project
     * @author ldeleuran
     * @modifiedby echristensen (can have multiple of these)
     */
@@ -67,7 +67,12 @@ Remember that comments is the best way to help your fellow developers.
 
 ## File structure
 
-TODO: libs, modules, tools - what goes where?
+TODO: framework, libraries, plugins, project - what goes where? 
+
+* Framework: Vertic framework
+* Libraries: Third party libraries
+* Plugin: AMD modules generic enough to be used cross project
+* Project: AMD modules specific to this project
 
 ## Third-party plugins
 
