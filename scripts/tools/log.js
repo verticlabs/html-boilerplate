@@ -1,14 +1,14 @@
-/*
- * Vertic JS utility library - Log
- * http://labs.vertic.com
- *
- * Copyright 2012, Vertic A/S
- * Dual licensed under the MIT or GPL Version 2 licenses.
- *
- * Date: Tue Jun 19, 2012 12:00:00 GMT +0200
- */
+/**
+* Log - Vertic framework
+*
+* Cross browser logging with history
+*
+* @section Module
+* @author ldeleuran
+* @modifiedby echristensen
+*/
 define(['jquery'], function($) {
-	var _Log = function(obj) {
+	var Log = function(obj) {
 		// Set defaults
 		this.history = [];
 		this.debug = false;
@@ -38,7 +38,7 @@ define(['jquery'], function($) {
 		}
 		return this;
 	};
-	_Log.prototype.write = function(arg, forceDebug) {
+	Log.prototype.write = function(arg, forceDebug) {
 		var orgArg = arg;
 		
 		// Add metadata
@@ -63,7 +63,7 @@ define(['jquery'], function($) {
 		// Return base argument
 		return orgArg;
 	};
-	_Log.prototype.setupDomConsole = function() {
+	Log.prototype.setupDomConsole = function() {
 		if (this.canDoDomConsole) {
 			this.domConsoleElems = {
 				container: $('<ol class="vertic-log" title="' + this.name + '" style="line-height:15px; max-height:100px; overflow:auto; background:#fffbd6; padding:10px; clear:both; margin:0; border-bottom:1px solid #ccc; position:relative; list-style:decimal; z-index:9999;"></ul>').prependTo('body'),
@@ -71,13 +71,13 @@ define(['jquery'], function($) {
 			};
 		}
 	};
-	_Log.prototype.callDomConsole = function(arg) {
+	Log.prototype.callDomConsole = function(arg) {
 		if (this.domConsole === true && this.canDoDomConsole === true) {
 			if (typeof this.domConsoleElems !== 'object') this.setupDomConsole();
 			this.domConsoleElems.container.append(this.domConsoleElems.item.clone().text(this.meta ? arg.datetime + ' - ' + arg.type + ' : ' + arg.string: arg));
 		}
 	};
-	_Log.prototype.addMeta = function(arg) {
+	Log.prototype.addMeta = function(arg) {
 		return this.meta ? {
 			arg: arg,
 			datetime: (function() {
@@ -89,5 +89,5 @@ define(['jquery'], function($) {
 		}: arg;
 	};
 	
-	return _Log;
+	return { Class: Log };
 });

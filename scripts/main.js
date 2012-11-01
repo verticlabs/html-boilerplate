@@ -11,14 +11,15 @@
  */
 require.config({
 	paths: {
-		"jquery": "libs/jquery"
+		'jquery': 'libs/jquery',
+		'modernizr': 'libs/modernizr'
 	}
 });
-require(['jquery', 'libs/modernizr', 'tools/core', 'tools/services'], function($, Modernizr, core, services) {
-	//
+require(['jquery', 'modernizr', 'tools/core'], function($, Modernizr, core) {
+	// DOM ready
 	$(function() {
 		core.log.write('DOM is ready!');
-		core.error.write(core,'Core dump','Reactor overheating',false);
+		core.error.write(core,'Core dump', 'Reactor overheating', false);
 
 		// expose core to global scope as vertic
 		core.$ = $;

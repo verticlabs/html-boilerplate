@@ -1,3 +1,11 @@
+/**
+* Modernizr
+*
+* Modernizr ported to live in AMD
+*
+* @section Library
+* @author echristensen
+*/
 define(function () {
 	/*!
 	* Modernizr v2.6.2pre

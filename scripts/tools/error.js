@@ -1,17 +1,17 @@
-/*
- * Vertic JS utility library - Error inherits from Log
- * http://labs.vertic.com
- *
- * Copyright 2012, Vertic A/S
- * Dual licensed under the MIT or GPL Version 2 licenses.
- *
- * Date: Tue Jan 31 12:00:00 2012 +0200
- */
-define(['jquery', 'tools/log'], function($, _Log) {
-	var _Error = function(){};
-	_Error.prototype = new _Log();
-	_Error.prototype.parent = _Log.prototype;
-	_Error.prototype.write = function(arg,status,msg,die){
+/**
+* Error log - Vertic framework
+*
+* Error log - dependant on normal log module
+*
+* @section Module
+* @author ldeleuran
+* @modifiedby echristensen
+*/
+define(['jquery', 'tools/log'], function($, log) {
+	var Error = function(){};
+	Error.prototype = new log.Class();
+	Error.prototype.parent = log.Class.prototype;
+	Error.prototype.write = function(arg,status,msg,die){
 		var orgArg = arg;
 		
 		// Set optional parameters
@@ -34,7 +34,7 @@ define(['jquery', 'tools/log'], function($, _Log) {
 		}
 		
 		// Push object to internal log
-		this.history.push(arg); 
+		this.history.push(arg);
 		
 		// Throw JS error if needed or simple warning if possible
 		if (die) {
@@ -57,5 +57,5 @@ define(['jquery', 'tools/log'], function($, _Log) {
 		return orgArg;
 	};
 	
-	return _Error;
+	return { Class: Error };
 });
