@@ -1,5 +1,5 @@
-/// <reference path="libs/modernizr-2.6.1-dev.js" />
-/// <reference path="libs/jquery-1.7.2-dev.js" />
+/// <reference path="libraries/modernizr-2.6.1-dev.js" />
+/// <reference path="libraries/jquery-1.7.2-dev.js" />
 /*
  * Vertic JS - Site functional wrapper
  * http://labs.vertic.com
@@ -11,15 +11,15 @@
  */
 require.config({
 	paths: {
-		'jquery': 'libs/jquery',
-		'modernizr': 'libs/modernizr'
+		'jquery': 'libraries/jquery',
+		'modernizr': 'libraries/modernizr'
 	}
 });
-require(['jquery', 'modernizr', 'tools/core'], function($, Modernizr, core) {
+require(['jquery', 'modernizr', 'framework/core'], function($, Modernizr, core) {
 	// DOM ready
-	$(function() {
+	$(document).on('ready', function () {
 		core.log.write('DOM is ready!');
-		core.error.write(core,'Core dump', 'Reactor overheating', false);
+		core.error.write(core, 'Core dump', 'Reactor overheating', false);
 
 		// expose core to global scope as vertic
 		core.$ = $;

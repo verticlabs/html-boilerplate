@@ -7,7 +7,7 @@
 * @author ldeleuran
 * @modifiedby echristensen
 */
-define(['jquery', 'tools/log'], function($, log) {
+define(['jquery', 'framework/log'], function($, log) {
 	var Error = function(){};
 	Error.prototype = new log.Class();
 	Error.prototype.parent = log.Class.prototype;

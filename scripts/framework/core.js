@@ -7,7 +7,7 @@
 * @author ldeleuran
 * @modifiedby echristensen
 */
-define(['jquery', 'tools/log', 'tools/error'], function($, log, error){
+define(['jquery', 'framework/log', 'framework/error'], function($, log, error){
 	var core = {};
 	core.log = new log.Class();
 	core.error = new error.Class();

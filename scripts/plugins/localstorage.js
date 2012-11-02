@@ -5,7 +5,7 @@
 *
 * @author ldeleuran
 **/
-define(['modernizr', 'tools/core', 'tools/JSON'], function (Modernizr, core) {
+define(['modernizr', 'framework/core', 'libraries/JSON'], function (Modernizr, core) {
 	var localStore, namespace;
 
 	// Detect if local storage i available

@@ -6,6 +6,6 @@
 * @section Library
 * @author echristensen
 */
-define(['libs/jquery-1.7.2-dev'], function() {
+define(['libraries/jquery-1.7.2-dev'], function() {
 	return jQuery.noConflict(true);
 });
