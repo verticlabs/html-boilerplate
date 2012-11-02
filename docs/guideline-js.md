@@ -40,7 +40,7 @@ TODO: Do not pollute, use vertic object.
 
 ## Coding style 
 
-TODO: camelCasing. Hard tabs. JSLint. Semi-colons
+TODO: camelCasing. Hard tabs. JSLint. Semi-colons. Single quotes.
 
 Use hard tabs (e.g. regular tabs, not spaces) for tabbing your code. This [allows your fellow coders to choose for themselves](http://lea.verou.me/2012/01/why-tabs-are-clearly-superior/) whether they want 2 or 4 spaces. Do, however, use spaces for vertical alignment. 
 
