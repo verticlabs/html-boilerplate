@@ -141,6 +141,8 @@ Follow [CSS semantics](http://csswizardry.com/2010/12/css-camel-case-seriously-s
 
 Use hard tabs (e.g. regular tabs, not spaces) for tabbing your code. This [allows your fellow coders to choose for themselves](http://lea.verou.me/2012/01/why-tabs-are-clearly-superior/) whether they want 2 or 4 spaces. Do, however, use spaces for vertical alignment. 
 
+Format your rules using [CSS Default braces](http://stackoverflow.com/questions/2938158/css-brace-styles).
+
 ## Comments
 
 Add blank line breaks to seperate code and use comments to explain your code - not repeat it.
