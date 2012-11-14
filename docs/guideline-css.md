@@ -37,7 +37,7 @@ __Module__ holds the rest of the site's styling, divided into portable modules.
 
 __Framework__ hold cross-project framework code. 
 
-All modules are stand-alone code blocks, that can and will work on their own and in conjunction with other modules. Modules can be nested inside each other, but shouldn't depend on it. 
+All modules are stand-alone code blocks, that can and will work on their own and in conjunction with other modules. Modules can be nested inside each other, but shouldn't depend on it. Be very careful when styling directly on tag selectors (such as 'a' or 'div'), as this often results in inflexibile code, especially when nesting modules. It is best to avoid styling directly on tag selectors all together, even when they're scoped within an object. However, avoiding it might sometimes prove impractical or impossible (due to code cleanness, CMSes and/or excessive _classitis_). If so, make sure that your module works in the necessary contexts.
 
 ### Naming, namespacing modules and inheritance
 
