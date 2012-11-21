@@ -6,7 +6,7 @@
 * @section module
 * @author ldeleuran
 */
-define(['jquery', 'libs/modernizr', 'tools/core'], function ($, Modernizr, core) {
+define(['jquery', 'modernizr', 'framework/core'], function ($, Modernizr, core) {
 	var AppCacheMonitor = function () {
 		return this.construct.apply(this, arguments);
 	};
