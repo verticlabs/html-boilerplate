@@ -1,22 +1,45 @@
-# Vertic - JS Guidelines
+# Vertic - Javascript Guidelines
 
-This document contains the guidelines for front-end development with JavaScript at Vertic. The guidelines should be followed at any time, for any given project. A lot of our work is based on [jQuery](http://jquery.com/) and [AMD Modules](https://github.com/amdjs/amdjs-api/wiki) with [Require.js](http://requirejs.org/), so make sure to know your way around those frameworks. 
+This document contains the guidelines for front-end development with JavaScript at Vertic. The guidelines should be followed at any time, for any given project. A lot of our work is based on [jQuery](http://jquery.com/) and [AMD Modules](https://github.com/amdjs/amdjs-api/wiki) with [Require.js](http://requirejs.org/), so make sure to know your way around those libraries.
 
-TODO: [JSLint](https://github.com/douglascrockford/JSLint) and our flavour of it.
-
-A large extent of our guidelines adhere to the [Pragmatic JS guidelines](https://github.com/madrobby/pragmatic.js). Please read those brief guidelines, as they are both sensible and easy to follow and so that you know ehere these guidelines are in line with Pragmatic JS, and where they deviate. 
+A large extent of our guidelines adhere to the [Pragmatic JS guidelines](https://github.com/madrobby/pragmatic.js) - which is released under the [MIT license](https://raw.github.com/madrobby/pragmatic.js/master/MIT-LICENSE). Please read those brief guidelines, as they are both sensible and easy to follow and so that you know where these guidelines are in line with Pragmatic JS, and where they deviate. 
 
 Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v=b6kgS_AwuH0). So follow them closely at all times, but deviate if deemed necessary and/or prudent - not because you're lazy. AND, if and when you decide to deviate from them, make sure to comment it thoroughly, documenting _why_ and _how_. 
 
 ## TL:DR;
+### General coding:
+* Use JSLint with our specified options.
+* Use long, descriptive variable and method names
+* Use blank lines to separate "paragraphs" of code for readability
+* Use comments to describe non-obvious code behavior (Don't do code description)
+* Don't write comments that do not add to code understanding (Don't do code description)
+* Optimize for performance only if there's a measurable problem (Optimize algorithms, not code style)
+* If a source file is longer than 200 lines of code, think about splitting it up
 
-* Use (our flavour of) JSLint.
-* Write modular code with AMD.
-* Make sure modules return an object. 
-* Only "do stuff" in main.js.
-* Adhere to [Pragmatic JS](https://github.com/madrobby/pragmatic.js) guidelines, but __do write sensible semi-colons__.
+### Functions:
+* `function name() { }` for named functions
+* `function () { }` for anonymous functions
+* `(function () { }())` for self calling functions
+* Write small concise functions that does just what it is expected to - nothing else
+
+### Statements & expressions:
+* Use short and concise expressions
+* Always use curly brackets for single line `if`'s and friends
+* Use ternary when it is simple enough as to not make code difficult to understand
+* Iterate over Arrays with `Array.prototype.forEach` (Use [this](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/forEach#Compatibility) polyfill for IE8 support)
+* Iterate over all other Objects with `for ... in`
+
+### Modules
+* Write modular code with AMD (RequireJS).
+* Make sure modules return an object. (Either a collection of methods or an Object that utilizes the prototype)
 
 ## Code structure
+As a general note for code structere we prioritize readable code. To help acheive this we have [JSLint](https://github.com/douglascrockford/JSLint) that can yell at you if you make formating or code style errors. It does this by performing static analysis and code quality checking with the following settings (Paste the following comment block just below the initial comment block in each module):
+
+    /*jslint browser: true, plusplus: true, vars: true*/
+	/*global require: true, define: true*/
+
+This tell JSLint to run with the standard linting options, but asume a browser environment (window, document and the likes) 	
 
 ### Namespacing and functional programming
 
