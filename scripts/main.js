@@ -17,7 +17,7 @@ require.config({
 });
 require(['jquery', 'modernizr', 'framework/core'], function($, Modernizr, core) {
 	// DOM ready
-	$(document).on('ready', function () {
+	$(function () {
 		core.log.write('DOM is ready!');
 		core.error.write(core, 'Core dump', 'Reactor overheating', false);
 
