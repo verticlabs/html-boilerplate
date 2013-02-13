@@ -45,7 +45,7 @@ Be very careful when styling directly on tag selectors (such as 'a' or 'div') wi
 
 Modules should be [sensible](http://csswizardry.com/2010/08/semantics-and-sensibility/), for functionality, not for what content they hold. This way, we keep or modules flexible and adaptable as content or module application change. 
 
-Module names should also be one-word (if possible) and lowercase with no hyphenation. Keep the module names as short as possible, without compromising readibility . Remember to think about your fellow coders - code should be readable. 
+Module names should also be one-word (if possible) and lowercase with no hyphenation. Keep the module names as short as possible, without compromising readibility . Remember to think about your fellow coders - code should be readable. If you want to enable partials and import a CSS file into another, you should follow the intended naming convention from SASS. Add an underscore in front of the filename, like: "_modulename.scss". Doing this results in SASS not compiling the file into a seperate CSS file. 
 
 All subelements in a given module should be prefixed with the module name. We do this to avoid specificity and inheritance errors when one module lives inside another module. For instance, two nested modules might both have headers (like a `.site` module and a `.article` module), so to avoid confusion, each module's header should be namespaced as such: `.site-header`, `.article-header`.
 
