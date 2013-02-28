@@ -36,7 +36,7 @@ Also, remember that this is a set of [guidelines](http://www.youtube.com/watch?v
 ## Code structure
 As a general note for code structere we prioritize readable code. To help acheive this we have [JSLint](https://github.com/douglascrockford/JSLint) that can yell at you if you make formating or code style errors. It does this by performing static analysis and code quality checking with the following settings (Paste the following comment block just below the initial comment block in each module):
 
-    /*jslint browser: true, plusplus: true, vars: true*/
+    /*jslint browser: true, plusplus: true, vars: true, white: true*/
 	/*global require: true, define: true*/
 
 This tell JSLint to run with the standard linting options, but asume a browser environment (window, document and the likes) 	
