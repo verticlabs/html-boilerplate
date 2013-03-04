@@ -8,10 +8,11 @@
 
 require.config({
 	paths: {
-		'jquery': 'libraries/jquery',
+		'jquery': 'libraries/jquery-1.9.1',
 		'modernizr': 'libraries/modernizr-2.6.2'
 	}
 });
+
 require(['jquery', 'modernizr', 'framework/core'], function($, Modernizr, core) {
 	"use strict";
 
@@ -21,7 +22,6 @@ require(['jquery', 'modernizr', 'framework/core'], function($, Modernizr, core) 
 		core.error.write(core, 'Core dump', 'Reactor overheating', false);
 
 		// expose core to global scope as vertic
-		core.$ = $;
 		window.vertic = core;
 	});
 	
