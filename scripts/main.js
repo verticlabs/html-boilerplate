@@ -8,12 +8,13 @@
 
 require.config({
 	paths: {
-		'jquery': 'libraries/jquery-1.9.1',
-		'modernizr': 'libraries/modernizr-2.6.2'
+		'jquery': 'libraries/jquery',
+		'modernizr': 'libraries/modernizr',
+		'core': 'framework/core'
 	}
 });
 
-require(['jquery', 'modernizr', 'framework/core'], function($, Modernizr, core) {
+require(['jquery', 'modernizr', 'core'], function($, Modernizr, core) {
 	"use strict";
 
 	// DOM ready
@@ -24,5 +25,5 @@ require(['jquery', 'modernizr', 'framework/core'], function($, Modernizr, core) 
 		// expose core to global scope as vertic
 		window.vertic = core;
 	});
-	
+
 });
