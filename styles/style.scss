@@ -7,9 +7,9 @@
 * @author       ldeleuran
 */
 // Include framework and normalization 
-@import "framework/vars.scss";
-@import "framework/framework.scss";
-@import "framework/normalize.scss";
+@import "framework/_vars";
+@import "framework/_framework";
+@import "framework/_normalize";
 
 // Include modules 
-@import "modules/baseline.scss";
+@import "modules/_baseline";
