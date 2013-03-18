@@ -1,0 +1,56 @@
+﻿/**
+* Baseline
+*
+* Common baseline set after normalize styles
+*
+* @section      Base
+* @author       ldeleuran
+*/
+html {
+	overflow-y:scroll;
+
+	font-size:62.5%;
+	font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+b,
+strong {
+	font-weight:bold;
+}
+i,
+em {
+	font-style:italic;
+}
+a {
+	color:$color-blue;
+	text-decoration:none;
+}
+mark a {
+	color:$color-white;
+	background:$color-blue;
+}
+a:hover {
+	text-decoration:underline;
+}
+a:active {
+	color:$color-black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight:bold;
+}
+abbr {
+	border-bottom:1px dotted $color-black;
+	cursor:help;
+}
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+}
+::-moz-selection { background: $color-blue; color: $color-white; text-shadow: none; }
+::selection { background: $color-blue; color: $color-white; text-shadow: none; }
