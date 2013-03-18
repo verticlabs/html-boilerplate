@@ -8,17 +8,9 @@
 */
 html {
 	overflow-y:scroll;
+
 	font-size:62.5%;
-}
-body {
 	font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-.group:after {
-	content:"."; 
-	display:block; 
-	height:0; 
-	clear:both; 
-	visibility:hidden;
 }
 b,
 strong {
@@ -29,18 +21,18 @@ em {
 	font-style:italic;
 }
 a {
-	color:blue;
+	color:$color-blue;
 	text-decoration:none;
 }
 mark a {
-	color:white;
-	background:blue;
+	color:$color-white;
+	background:$color-blue;
 }
 a:hover {
 	text-decoration:underline;
 }
 a:active {
-	color:#000;
+	color:$color-black;
 }
 h1,
 h2,
@@ -51,7 +43,7 @@ h6 {
 	font-weight:bold;
 }
 abbr {
-	border-bottom:1px dotted #333;
+	border-bottom:1px dotted $color-black;
 	cursor:help;
 }
 img,
@@ -60,5 +52,5 @@ object,
 video {
 	max-width: 100%;
 }
-::-moz-selection { background: blue; color: #fff; text-shadow: none; }
-::selection { background: blue; color: #fff; text-shadow: none; }
+::-moz-selection { background: $color-blue; color: $color-white; text-shadow: none; }
+::selection { background: $color-blue; color: $color-white; text-shadow: none; }
