@@ -3,8 +3,8 @@
 	name: 'main',
 	optimize: 'uglify',
 	paths: {
-		'jquery': 'libraries/jquery',
-		'modernizr': 'libraries/modernizr',
+		'jquery': 'libraries/jquery-1.9.1',
+		'modernizr': 'libraries/modernizr-2.6.2',
 		'core': 'framework/core'
 	},
 	out: '../main-built.js',
