@@ -107,8 +107,7 @@ We order our properties in every rule in 6 different sections:
 1. Box model - display mode, width, height, padding, margin etc.
 2. Position - Positioning and offsets
 3. Typography
-4. Background styles
-5. Miscellaneous
+4. Box styling - border, background, box-shadow etc.
 6. Includes - mixins etc.
 
 Every section is seperated with a blank new line. Example:
@@ -130,7 +129,6 @@ Every section is seperated with a blank new line. Example:
 		font-size: 2em;
 		
 		background:#ccc url(../media/images/ui/back.gif) 0 0 repeat-x;
-		
 		border-radius: 5px;
 		
 		@include box-shadow(0 0 5px rgba(0,0,0,0.5));
@@ -225,7 +223,6 @@ A lot of our developers are running Microsoft Visual Studio, and [Mindscape's We
 		font-size: 2em;
 		
 		background:#ccc url(../media/images/ui/back.gif) 0 0 repeat-x;
-		
 		border-radius: 5px;
 		
 		@include box-shadow(0 0 5px rgba(0,0,0,0.5));
